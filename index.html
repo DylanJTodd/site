@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dylan Todd</title>
+    <link rel="icon" href="src/portfolioIcon.png">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body class="home">
+    <div class="petal-container"></div>
+    
+    <header>
+        <nav>
+            <a href="#" class="nav-link glitch-text">Home</a>
+            <a href="projects.html" class="nav-link glitch-text">Projects</a>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <div class="profile-section">
+            <div class="profile-image-wrapper">
+                <img src="src/mainPhoto.jpg" alt="Dylan Todd" class="profile-image">
+                <div class="glitch-overlay"></div>
+            </div>
+        </div>
+
+        <div class="intro-section">
+            <h1 class="glitch-text" data-text="Hello, I'm Dylan!">Hello, I'm Dylan!</h1>
+            <p class="subtitle">Software & Machine Learning Enthusiast</p>
+            <p class="bio">
+                Building fullstack  systems and exploring the intersection of technology and creativity.
+                Inspired by innovation, driven by curiosity.
+            </p>
+            
+            <div class="interests">
+                <span class="interest-tag">🤖 Machine Learning</span>
+                <span class="interest-tag">🧠 Artificial Intelligence</span>
+                <span class="interest-tag">👤 Identity AI</span>
+                <span class="interest-tag">💻 Software Engineering</span>
+                <span class="interest-tag">🌐 Full Stack Development</span>
+                <span class="interest-tag">⚙️ MLOps / DevOps</span>
+            </div>
+
+            <div class="links-container">
+
+                <!--Update when you publish first paper-->
+                <div class="papers-link-wrapper">
+                    <a href="" class="papers-link">
+                        <div class="paper-icon">
+                            <div class="paper-doc"></div>
+                        </div>
+                        <span>View my papers</span>
+                    </a>
+                </div>
+
+
+                <div class="music-link-wrapper">
+                    <a href="https://www.youtube.com/@dtace5339/videos" class="music-link" target="_blank">
+                        <div class="vinyl-icon">
+                            <div class="vinyl-disc"></div>
+                            <div class="vinyl-center"></div>
+                        </div>
+                        <span>Listen to my music</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const petalContainer = document.querySelector('.petal-container');
+        let petalIndex = 0;
+        
+        function createPetal() {
+            const petal = document.createElement('div');
+            petal.className = 'petal';
+            
+            const gridWidth = 10;
+            const section = petalIndex % gridWidth;
+            const sectionWidth = 100 / gridWidth;
+            const randomOffset = (Math.random() - 0.5) * sectionWidth * 0.8;
+            petal.style.left = (section * sectionWidth + sectionWidth / 2 + randomOffset) + '%';
+            
+            petal.style.animationDuration = (Math.random() * 4 + 7) + 's';
+            petal.style.animationDelay = Math.random() * 4 + 's';
+            petalContainer.appendChild(petal);
+            
+            petalIndex++;
+            setTimeout(() => petal.remove(), 13000);
+        }
+        
+        setInterval(createPetal, 1700);
+        for(let i = 0; i < 5; i++) {
+            setTimeout(createPetal, i * 650);
+        }
+
+        const vinylDisc = document.querySelector('.vinyl-disc');
+        const musicLink = document.querySelector('.music-link');
+        
+        musicLink.addEventListener('mouseenter', () => {
+            vinylDisc.style.animationPlayState = 'running';
+        });
+    </script>
+</body>
+</html>

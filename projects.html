@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Portfolio</title>
+    <link rel="icon" href="src/portfolioIcon.png">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="nav-link glitch-text">Home</a>
+            <a href="projects.html" class="nav-link glitch-text">Projects</a>
+        </nav>
+    </header>
+
+    <main class="projects-hero">
+        <div class="projects-header">
+            <h1 class="glitch-text" data-text="My Projects">My Projects</h1>
+            <p>Exploring the intersection of AI, creativity, and innovation</p>
+        </div>
+
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="ml">Machine Learning</button>
+            <button class="filter-btn" data-filter="swe">Software Engineering</button>
+        </div>
+
+        <div class="projects-container">
+            <div class="project-card" data-categories="swe" onclick="toggleProject(this)">
+                <div class="category-badge">
+                    <span class="category-tag swe">Software Engineering</span>
+                </div>
+                <div class="project-header">
+                    <h2 class="project-title">Portfolio Website (Discontinued)</h2>
+                </div>
+                <p class="project-preview">
+                    Full-stack Fallout-themed web application with dynamic responsiveness and custom animations...
+                </p>
+                <div class="project-details">
+                    <div class="project-tags">
+                        <span class="tag">Svelte</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">PHP</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">REST API</span>
+                    </div>
+                    <p class="project-description">
+                        Architected and deployed a full-stack Fallout-themed web application with dynamic responsiveness and custom animations. 
+                        Implemented 10+ interactive terminal features using Svelte/TypeScript frontend and LAMP stack for backend. 
+                        Built a comprehensive RESTful API for database communication, including account management, forms, notes, and settings. 
+                        Features a state management system using Svelte stores and cookie synchronization, enabling persistent user customization 
+                        across 12+ configurable settings with seamless cross-session experience.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/DylanJTodd/Portfolio" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-categories="ml" onclick="toggleProject(this)">
+                <div class="category-badge">
+                    <span class="category-tag ml">Machine Learning</span>
+                </div>
+                <div class="project-header">
+                    <h2 class="project-title">MeAI - Persona-Driven AI</h2>
+                </div>
+                <p class="project-preview">
+                    Conversational AI using adapter-based fine-tuning on Phi-2 Instruct model...
+                </p>
+                <div class="project-details">
+                    <div class="project-tags">
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">HuggingFace</span>
+                        <span class="tag">PEFT</span>
+                        <span class="tag">LLMs</span>
+                        <span class="tag">RAG</span>
+                    </div>
+                    <p class="project-description">
+                        Developed a persona-driven conversational AI using adapter-based fine-tuning on Phi-2 Instruct model with PyTorch and 
+                        HuggingFace Transformers. Implemented PEFT (Parameter-Efficient Fine-Tuning) architecture with modular checkpoint 
+                        management system, enabling rapid persona deployment across multiple model iterations. Architected scalable foundation 
+                        for RAG integration with robust prompt engineering framework and output optimization. Includes analytics dashboards 
+                        through Power BI to monitor user interactions, token usage, sentiment patterns, and failure modes.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://huggingface.co/spaces/DylanJTodd/MeAI" class="project-link">Demo</a>
+                        <a href="https://github.com/DylanJTodd/MeAI" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-categories="ml" onclick="toggleProject(this)">
+                <div class="category-badge">
+                    <span class="category-tag ml">Machine Learning</span>
+                </div>
+                <div class="project-header">
+                    <h2 class="project-title">ISIC 2024 - Melanoma Detection</h2>
+                </div>
+                <p class="project-preview">
+                    CNN ensemble model for skin cancer detection achieving 95% accuracy...
+                </p>
+                <div class="project-details">
+                    <div class="project-tags">
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">Transfer Learning</span>
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag">Medical AI</span>
+                    </div>
+                    <p class="project-description">
+                        Developed a CNN ensemble model for melanoma detection achieving 95% accuracy on the ISIC 2024 challenge dataset. 
+                        Combined multiple architectures with specialized loss functions and class weighting to reduce false negative rates by 85%. 
+                        Engineered a robust data pipeline processing 300GB+ of medical imaging data with advanced augmentation techniques 
+                        including rotations, flipping, and color jittering. Integrated 2024 and historical datasets for comprehensive training 
+                        coverage, demonstrating strong performance in real-world medical imaging scenarios.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/DylanJTodd/Kaggle-Competitions/tree/main/ISIC%202024%20-%20Skin%20Cancer%20Detection" class="project-link">Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-categories="ml" onclick="toggleProject(this)">
+                <div class="category-badge">
+                    <span class="category-tag ml">Machine Learning</span>
+                </div>
+                <div class="project-header">
+                    <h2 class="project-title">ThumbGenie - AI Thumbnail Generator</h2>
+                </div>
+                <p class="project-preview">
+                    AI-powered thumbnail generator using U-Net architecture and Stable Diffusion...
+                </p>
+                <div class="project-details">
+                    <div class="project-tags">
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">U-Net</span>
+                        <span class="tag">Stable Diffusion</span>
+                        <span class="tag">GANs</span>
+                        <span class="tag">Azure</span>
+                    </div>
+                    <p class="project-description">
+                        Built an AI-powered thumbnail generator using U-Net architecture and Stable Diffusion, trained on Azure GPU compute 
+                        environments for scalable experimentation. Engineered an end-to-end deep learning pipeline with modular Python 
+                        architecture encompassing preprocessing, training, and inference scripts. Implemented Azure Blob Storage-backed 
+                        dataset pipelines to manage 10,000+ images (50GB+) with automated ingestion, augmentation, and metadata tracking 
+                        via CSV. Integrated Azure DevOps-style CI/CD practices for model versioning and reproducible experiments.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/DylanJTodd/ThumbGenie" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-categories="ml swe" onclick="toggleProject(this)">
+                <div class="category-badge">
+                    <span class="category-tag ml">Machine Learning</span>
+                    <span class="category-tag swe">Software Engineering</span>
+                </div>
+                <div class="project-header">
+                    <h2 class="project-title">Neural Network Training System</h2>
+                </div>
+                <p class="project-preview">
+                    Pure C++ neural network trainer with real-time visualization...
+                </p>
+                <div class="project-details">
+                    <div class="project-tags">
+                        <span class="tag">C++</span>
+                        <span class="tag">SFML</span>
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Multithreading</span>
+                    </div>
+                    <p class="project-description">
+                        Built a pure C++ neural network trainer achieving 97-98% accuracy on MNIST with real-time visualization and interactive 
+                        testing interface. Optimized the training pipeline with loop unrolling and batch processing, reducing training time by 200%. 
+                        Architected a multi-threaded visualization system with SFML, enabling real-time network monitoring during training. 
+                        Features include from-scratch implementation of backpropagation, gradient descent, and various activation functions, 
+                        demonstrating deep understanding of neural network fundamentals.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/DylanJTodd/Cpp-Manual-Multi-layer-Perceptron-/releases/download/v1.0/NeuralNetworkTrainer_v1.0.zip" class="project-link">Download</a>
+                        <a href="https://github.com/DylanJTodd/Cpp-Manual-Multi-layer-Perceptron-" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-categories="swe" onclick="toggleProject(this)">
+                <div class="category-badge">
+                    <span class="category-tag swe">Software Engineering</span>
+                </div>
+                <div class="project-header">
+                    <h2 class="project-title">DataLemur SQL Game</h2>
+                </div>
+                <p class="project-preview">
+                    Interactive web-based SQL learning platform with 1M+ visits...
+                </p>
+                <div class="project-details">
+                    <div class="project-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">HTML/CSS</span>
+                        <span class="tag">PGLite</span>
+                        <span class="tag">SQL</span>
+                    </div>
+                    <p class="project-description">
+                        Designed and deployed a web-based SQL game using HTML, CSS, JavaScript, and PGLite, gathering over 5 million visits. 
+                        Developed 10 advanced SQL challenges, improving user engagement and platform growth. Enhanced website speed and 
+                        performance via schema optimizations and additional software changes by 60%. The platform provides an interactive 
+                        learning experience for SQL practitioners of all skill levels, with real-time query execution and immediate feedback.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://datalemur.com/sql-game" class="project-link">Play Game</a>
+                    </div>
+                </div>
+            </div>
+
+             <div class="project-card" data-categories="ml" onclick="toggleProject(this)">
+                <div class="category-badge">
+                    <span class="category-tag ml">Machine Learning</span>
+                </div>
+                <div class="project-header">
+                    <h2 class="project-title">SIKG - Self-Identity Knowledge Graph</h2>
+                </div>
+                <p class="project-preview">
+                    Dynamic memory architecture enabling LLM agents to form, revise, and evolve beliefs through conversation...
+                </p>
+                <div class="project-details">
+                    <div class="project-tags">
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">LLMs</span>
+                        <span class="tag">Knowledge Graphs</span>
+                        <span class="tag">AGM Theory</span>
+                        <span class="tag">Cognitive AI</span>
+                    </div>
+                    <p class="project-description">
+                        Undergraduate thesis research developing a neurosymbolic memory architecture for identity-based AI applications. 
+                        Implements dynamic knowledge graphs that enable LLM agents to recursively construct and evolve belief structures 
+                        through multi-turn interactions. Features AGM belief revision theory for graceful contradiction resolution, 
+                        confidence-based epistemic entrenchment preventing catastrophic forgetting, and metacognitive monitoring for 
+                        self-aware reasoning. Combines symbolic graph structure with neural semantic embeddings, enabling hybrid retrieval 
+                        that merges RAG's intuitive recall with structured logical reasoning. Addresses critical gaps in companion AI, 
+                        game NPCs, and therapeutic agents by providing persistent memory, coherent personality simulation, and temporal 
+                        belief evolution. The architecture demonstrates how LLMs can achieve genuine continual learning without gradient 
+                        updates through experience-driven belief formation.
+                    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/DylanJTodd/Dyanmic-Knowledge-Graph-Demo" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <script>
+        function closeCard(card) {
+            if (!card) return;
+            card.classList.add('closing');
+            card.classList.remove('expanded');
+            setTimeout(() => card.classList.remove('closing'), 400);
+        }
+
+        function toggleProject(card) {
+            const current = document.querySelector('.project-card.expanded');
+            const isSame = current === card;
+
+            if (current) closeCard(current);
+            if (!isSame) {
+                card.classList.add('expanded');
+                setTimeout(() => {
+                    card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 50);
+            }
+        }
+
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.dataset.filter;
+                
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const expandedCard = document.querySelector('.project-card.expanded');
+                if (expandedCard) closeCard(expandedCard);
+
+                projectCards.forEach(card => {
+                    const categories = card.dataset.categories;
+                    
+                    if (filter === 'all') {
+                        card.classList.remove('hidden');
+                    } else if (categories.includes(filter)) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
